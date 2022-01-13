@@ -165,6 +165,69 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9812/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王一凡（Dave）">
+      <meta itemprop="description" content="有志者事竟成">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="davethepowerful的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9812/" class="post-title-link" itemprop="url">每日一题12</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-01-13 11:10:34 / 修改时间：11:36:43" itemprop="dateCreated datePublished" datetime="2022-01-13T11:10:34+08:00">2022-01-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>首先，考虑实现一个简化的函数 maxGain(node)，该函数计算二叉树中的一个节点的最大贡献值，具体而言，就是     在以该节点为根节点的子树中寻找以该节点为起点的一条路径，使得该路径上的节点值之和最大。具体而言，该函数的计算如下：<br>空节点的最大贡献值等于 0。<br>非空节点的最大贡献值等于节点值与其子节点中的最大贡献值之和（对于叶节点而言，最大贡献值等于节点值）。<br>例如，考虑如下二叉树。</p>
+<p>   -10<br>   / <br>  9  20<br>    /  <br>   15   7</p>
+<pre><code>叶节点 9、15、7 的最大贡献值分别为 9、15、7。
+</code></pre>
+<p>得到叶节点的最大贡献值之后，再计算非叶节点的最大贡献值。节点 2020 的最大贡献值等于 20+max(15,7)=3520+max(15,7)=35，节点 -10−10 的最大贡献值等于 -10+max(9,35)=25−10+max(9,35)=25。<br>上述计算过程是递归的过程，因此，对根节点调用函数 maxGain，即可得到每个节点的最大贡献值。<br>根据函数 maxGain 得到每个节点的最大贡献值之后，如何得到二叉树的最大路径和？对于二叉树中的一个节点，该节点的最大路径和取决于该节点的值与该节点的左右子节点的最大贡献值，如果子节点的最大贡献值为正，则计入该节点的最大路径和，否则不计入该节点的最大路径和。维护一个全局变量 maxSum 存储最大路径和，在递归过程中更新 maxSum 的值，最后得到的 maxSum 的值即为二叉树中的最大路径和。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9813/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -215,69 +278,6 @@
 <p>如果左括号栈和星号栈都为空，则没有字符可以和当前的右括号匹配，返回 \text{false}false。</p>
 <p>遍历结束之后，左括号栈和星号栈可能还有元素。为了将每个左括号匹配，需要将星号看成右括号，且每个左括号必须出现在其匹配的星号之前。当两个栈都不为空时，每次从左括号栈和星号栈分别弹出栈顶元素，对应左括号下标和星号下标，判断是否可以匹配，匹配的条件是左括号下标小于星号下标，如果左括号下标大于星号下标则返回 \text{false}false。</p>
 <p>最终判断左括号栈是否为空。如果左括号栈为空，则左括号全部匹配完毕，剩下的星号都可以看成空字符串，此时 ss 是有效的括号字符串，返回 \text{true}true。如果左括号栈不为空，则还有左括号无法匹配，此时 ss 不是有效的括号字符串，返回 \text{false}false。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9812/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王一凡（Dave）">
-      <meta itemprop="description" content="有志者事竟成">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="davethepowerful的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/13/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%9812/" class="post-title-link" itemprop="url">每日一题12</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-01-13 11:10:34 / 修改时间：11:36:43" itemprop="dateCreated datePublished" datetime="2022-01-13T11:10:34+08:00">2022-01-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>首先，考虑实现一个简化的函数 maxGain(node)，该函数计算二叉树中的一个节点的最大贡献值，具体而言，就是     在以该节点为根节点的子树中寻找以该节点为起点的一条路径，使得该路径上的节点值之和最大。具体而言，该函数的计算如下：<br>空节点的最大贡献值等于 0。<br>非空节点的最大贡献值等于节点值与其子节点中的最大贡献值之和（对于叶节点而言，最大贡献值等于节点值）。<br>例如，考虑如下二叉树。</p>
-<p>   -10<br>   / <br>  9  20<br>    /  <br>   15   7</p>
-<pre><code>叶节点 9、15、7 的最大贡献值分别为 9、15、7。
-</code></pre>
-<p>得到叶节点的最大贡献值之后，再计算非叶节点的最大贡献值。节点 2020 的最大贡献值等于 20+max(15,7)=3520+max(15,7)=35，节点 -10−10 的最大贡献值等于 -10+max(9,35)=25−10+max(9,35)=25。<br>上述计算过程是递归的过程，因此，对根节点调用函数 maxGain，即可得到每个节点的最大贡献值。<br>根据函数 maxGain 得到每个节点的最大贡献值之后，如何得到二叉树的最大路径和？对于二叉树中的一个节点，该节点的最大路径和取决于该节点的值与该节点的左右子节点的最大贡献值，如果子节点的最大贡献值为正，则计入该节点的最大路径和，否则不计入该节点的最大路径和。维护一个全局变量 maxSum 存储最大路径和，在递归过程中更新 maxSum 的值，最后得到的 maxSum 的值即为二叉树中的最大路径和。</p>
 
       
     </div>
